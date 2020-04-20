@@ -21,6 +21,17 @@ stuLL_t* createNodeLinkedList(void)
 {
 	// PROBLEM #1: complete the code for this function
 	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+stuLL_t *pNode = (stuLL_t*) malloc(sizeof(stuLL_t));
+if (pNode != NULL)
+{
+		//provide data to new node pNode
+		pNode->data.fname = stdata.fname;  //node created for family name
+		pNode->data.gname = stdata.gname;  //node created for given name
+		pNode->data.grade = stdata.grade;  // node created for grade
+
+		pNode->pNext=NULL;   // initializing  pNode pointer
+}
+	return pNode;
 }
 
 /*
@@ -94,10 +105,12 @@ stuLL_t* findLinkedList(stuLL_t *pHEAD, char *targetFamilyName)
 		{
 			// PROBLEM #2: complete the code for this function
 			//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
+		return pw->pNext;  // if pw is not equal to null and the family name we are searching is not equal to target family name then
+							// pointer will return to the next node or next family name for comparison.
 		}
 		printf("\n");
 	}
-	return pW;
+	return pW; // if it family name comparison is same then it will return that particular node
 }
 
 /*
