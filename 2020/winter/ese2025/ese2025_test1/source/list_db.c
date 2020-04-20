@@ -17,7 +17,7 @@
 /*
  * (private) function creates a new node; if it returns NULL, malloc() was unable to do it!
  */
-stuLL_t* createNodeLinkedList(void)
+stuLL_t* createNodeLinkedList(stuRec_t stdata)
 {
 	// PROBLEM #1: complete the code for this function
 	//	       NOTE: PLEASE COMMIT CHANGES ONCE YOUR DONE THIS FUNCTION
