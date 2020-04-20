@@ -65,10 +65,10 @@ int comparo_grade(const void *pA, const void *pB)
 		stuDA_t student_B = *((stuDA_t*) pB);
 
 		// get student given names
-		char *grade_A = student_A.data.grade;
-		char *grade_B = student_B.data.grade;
+		float *grade_A = student_A.data.grade;
+		float *grade_B = student_B.data.grade;
 
-		return strcmp(grade_A, grade_B);
+		return strcmp(int)(grade_A - grade_B);
 }
 
 /*
